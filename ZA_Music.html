@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Favourite Albums</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f5f7fa;
+}
+
+.home-btn{
+    position:fixed;
+    top:20px;
+    left:20px;
+    background:#4a90e2;
+    color:white;
+    text-decoration:none;
+    padding:12px 18px;
+    border-radius:8px;
+    font-weight:bold;
+    z-index:1000;
+}
+
+.home-btn:hover{
+    background:#357abd;
+}
+
+/* ======================
+   Header Section
+====================== */
+
+.header{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#1f2937,#374151);
+    color:white;
+    padding:40px;
+}
+
+.header-content{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:80px;
+    width:90%;
+    max-width:1200px;
+}
+
+.header-text{
+    max-width:500px;
+}
+
+.header h1{
+    font-size:4rem;
+    margin-bottom:20px;
+    letter-spacing:3px;
+}
+
+.header p{
+    font-size:1.4rem;
+    color:#d1d5db;
+}
+
+.header img{
+    width:350px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* ======================
+   Album Sections
+====================== */
+
+.album-row{
+    min-height:100vh;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    justify-items:center;
+    gap:50px;
+    padding:50px;
+}
+
+.album-card{
+    text-align:center;
+    width:100%;
+    max-width:450px;
+}
+
+.album-card h2{
+    font-size:2rem;
+    margin-bottom:20px;
+    color:#2c3e50;
+    letter-spacing:1px;
+}
+
+.album-card img{
+    width:100%;
+    max-width:400px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    transition:transform .3s ease;
+}
+
+.album-card img:hover{
+    transform:scale(1.05);
+}
+
+.row1{
+    background:#ffffff;
+}
+
+.row2{
+    background:#eef5ff;
+}
+
+/* Keeps 2 columns on most screens,
+   drops to 1 only on phones */
+
+@media (max-width: 768px){
+    .album-row{
+        grid-template-columns:1fr;
+    }
+
+    .header-content{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .header-text{
+        text-align:center;
+    }
+
+    .header h1{
+        font-size:3rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<a href="index.html" class="home-btn">← Home</a>
+
+<section class="header">
+
+    <div class="header-content">
+
+        <div class="header-text">
+            <h1> My Favourite Albums </h1>
+            <p>Some of my favourites.</p>
+        </div>
+
+        <img src="A_TheoMusic.jpg" alt="Theo Music">
+
+    </div>
+
+</section>
+
+<section class="album-row row1">
+
+    <div class="album-card">
+        <h2>Vol. 4</h2>
+        <img src="G_Vol.4.png" alt="Vol. 4">
+    </div>
+
+    <div class="album-card">
+        <h2>Sunset Boulevard</h2>
+        <img src="G_SunsetBoulevard.png" alt="Sunset Boulevard">
+    </div>
+
+</section>
+
+<section class="album-row row2">
+
+    <div class="album-card">
+        <h2>Top Priority</h2>
+        <img src="G_TopPriority.png" alt="Top Priority">
+    </div>
+
+    <div class="album-card">
+        <h2>London Calling</h2>
+        <img src="G_LondonCalling.png" alt="London Calling">
+    </div>
+
+</section>
+
+</body>
+</html>

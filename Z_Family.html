@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Family | Theo Clarkson</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f5f7fa;
+}
+
+.home-btn{
+    position:fixed;
+    top:20px;
+    left:20px;
+    background:#4a90e2;
+    color:white;
+    text-decoration:none;
+    padding:12px 18px;
+    border-radius:8px;
+    font-weight:bold;
+    z-index:1000;
+}
+
+.home-btn:hover{
+    background:#357abd;
+}
+
+.section{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:60px 20px;
+}
+
+.section h2{
+    font-size:2.8rem;
+    margin-bottom:30px;
+    color:#2c3e50;
+    letter-spacing:2px;
+}
+
+.section img{
+    width:400px;
+    max-width:90%;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.18);
+    transition:transform .3s ease;
+}
+
+.section img:hover{
+    transform:scale(1.03);
+}
+
+.me{
+    background:#ffffff;
+}
+
+.mother{
+    background:#eef5ff;
+}
+
+.brother{
+    background:#ffffff;
+}
+
+.sister{
+    background:#eef5ff;
+}
+
+.cats{
+    background:#ffffff;
+}
+</style>
+</head>
+
+<body>
+
+<a href="index.html" class="home-btn">← Home</a>
+
+<section class="section me">
+    <h2>Me</h2>
+    <img src="A_Theo.png" alt="Theo Clarkson">
+</section>
+
+<section class="section mother">
+    <h2>Mother</h2>
+    <img src="B_Mother.png" alt="Mother">
+</section>
+
+<section class="section brother">
+    <h2>Brother</h2>
+    <img src="Felix.jpg" alt="Felix">
+</section>
+
+<section class="section sister">
+    <h2>Sister</h2>
+    <img src="Alysha.jpg" alt="Alysha">
+</section>
+
+<section class="section cats">
+    <h2>My Cats</h2>
+    <img src="Cats.png" alt="Mistletoe and Sampson">
+</section>
+
+</body>
+</html>

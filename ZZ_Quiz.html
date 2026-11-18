@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz Game</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.home-btn {
+    display: inline-block;
+    background: #4a90e2;
+    color: white;
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.home-btn:hover {
+    background: #357abd;
+}
+
+h1 {
+    text-align: center;
+}
+
+.question {
+    background: white;
+    padding: 15px;
+    margin: 15px auto;
+    max-width: 600px;
+    border-radius: 8px;
+}
+
+.option {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background: white;
+    font-size: 16px;
+}
+
+.correct {
+    background-color: green;
+    color: white;
+}
+
+.wrong {
+    background-color: red;
+    color: white;
+}
+
+#score {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<a href="index.html" class="home-btn">← Home</a>
+
+<h1>Quiz Game</h1>
+
+<div class="question">
+    <h3>1. How many siblings do I have?</h3>
+    <button class="option" onclick="checkAnswer(this, false, 1)">a) 7</button>
+    <button class="option" onclick="checkAnswer(this, false, 1)">b) 1</button>
+    <button class="option" onclick="checkAnswer(this, true, 1)">c) 2</button>
+    <button class="option" onclick="checkAnswer(this, false, 1)">d) 0</button>
+</div>
+
+<div class="question">
+    <h3>2. How many things do I want for Christmas?</h3>
+    <button class="option" onclick="checkAnswer(this, false, 2)">a) 6</button>
+    <button class="option" onclick="checkAnswer(this, true, 2)">b) 4</button>
+    <button class="option" onclick="checkAnswer(this, false, 2)">c) 0</button>
+    <button class="option" onclick="checkAnswer(this, false, 2)">d) 10</button>
+</div>
+
+<div class="question">
+    <h3>3. What's the square root of 121?</h3>
+    <button class="option" onclick="checkAnswer(this, true, 3)">a) 11</button>
+    <button class="option" onclick="checkAnswer(this, false, 3)">b) 19</button>
+    <button class="option" onclick="checkAnswer(this, false, 3)">c) 7</button>
+    <button class="option" onclick="checkAnswer(this, false, 3)">d) idk</button>
+</div>
+
+<div class="question">
+    <h3>4. What is 97 - 39?</h3>
+    <button class="option" onclick="checkAnswer(this, false, 4)">a) 52</button>
+    <button class="option" onclick="checkAnswer(this, false, 4)">b) 62</button>
+    <button class="option" onclick="checkAnswer(this, false, 4)">c) 136</button>
+    <button class="option" onclick="checkAnswer(this, true, 4)">d) 58</button>
+</div>
+
+<div id="score"></div>
+
+<script>
+let score = 0;
+let answeredQuestions = 0;
+const answered = {};
+
+function checkAnswer(button, correct, questionNumber) {
+    if (answered[questionNumber]) return;
+
+    answered[questionNumber] = true;
+    answeredQuestions++;
+
+    if (correct) {
+        button.classList.add("correct");
+        score++;
+    } else {
+        button.classList.add("wrong");
+    }
+
+    if (answeredQuestions === 4) {
+        document.getElementById("score").innerHTML =
+            "Your Score: " + score + "/4";
+    }
+}
+</script>
+
+</body>
+</html>
