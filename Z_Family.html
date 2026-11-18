@@ -66,6 +66,28 @@ body{
     transform:scale(1.03);
 }
 
+.clickable-image{
+    cursor:pointer;
+}
+
+.about-me-box{
+    display:none;
+    margin-top:30px;
+    max-width:900px;
+    width:90%;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.12);
+    text-align:left;
+    line-height:1.8;
+    font-size:1.1rem;
+}
+
+.about-me-box.show{
+    display:block;
+}
+
 .me{
     background:#ffffff;
 }
@@ -94,7 +116,217 @@ body{
 
 <section class="section me">
     <h2>Me</h2>
-    <img src="A_Theo.png" alt="Theo Clarkson">
+
+<p class="click-me"> Click Me</p>
+
+<img src="A_Theo.png"
+     alt="Theo Clarkson"
+     class="clickable-image"
+     onclick="toggleAboutMe()">
+
+    <div id="aboutMeBox" class="about-me-box">
+        <p>
+
+
+<li>(I used AI to help me write this due to it being 4:10 AM 19/11)</li>
+
+My name is Theo Clarkson, and I am a 16-year-old student at Middleton Grange School. I currently live in Christchurch, New Zealand, after moving here from Wellington when I was 11 years old. Since moving to Christchurch, I have settled into school, made good friends, and become familiar with the city. After living here for several years, I can safely say that I prefer Christchurch anyway.
+moving to Christchurch, I have settled into school, made good friends, and built a life that I enjoy. Christchurch is a great place to live, and it has become the place that I proudly call home.
+One of my favourite hobbies is playing board games, especially chess and Scrabble. They are games that I have always enjoyed playing and are something I like to do in my spare time. Whether I am playing a casual game or trying to win, I find them both entertaining and a good way to pass the time. Board games are one of my favourite hobbies and something I always enjoy coming back to.
+On this website, you can learn a little more about me and the people who are important in my life. Below this section, you will find information about my mother, my brother, my sister, and even my cats. They are all important parts of my life and help make my family what it is. Thanks for taking the time to visit my website and learn a little more about me.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </p>
+    </div>
 </section>
 
 <section class="section mother">
@@ -116,6 +348,12 @@ body{
     <h2>My Cats</h2>
     <img src="Cats.png" alt="Mistletoe and Sampson">
 </section>
+
+<script>
+function toggleAboutMe() {
+    document.getElementById("aboutMeBox").classList.toggle("show");
+}
+</script>
 
 </body>
 </html>
